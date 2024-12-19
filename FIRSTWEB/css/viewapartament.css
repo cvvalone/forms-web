@@ -1,0 +1,48 @@
+﻿.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+    margin-bottom: 100px;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.profile-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.separator {
+    width: 100%;
+}
+
+.view-item{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.view-item-img img{
+    min-width: 600px;
+    min-height: 372px;
+    max-height: 372px;
+    border-radius: var(--border-radius);
+}
+
+.view-item-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 30px;
+}
+
+.item-cost{
+    font-size: 24px;
+    letter-spacing: 0.1rem;
+}

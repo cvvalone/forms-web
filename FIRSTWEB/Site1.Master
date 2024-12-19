@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="FIRSTWEB.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>EHouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <%-- reset all styles --%>
+    <link href="css/reset.css" rel="stylesheet" />
+
+    <%-- header styles --%>
+    <link href="css/headerfooter.css" rel="stylesheet" />
+
+    <%-- datatables css --%>
+
+    <link href="datatables/css/dataTables.dataTables.min.css" rel="stylesheet" />
+    
+    <%-- our scripts --%>
+    
+    <script src="datatables/js/script.js"></script>
+
+    <%-- JQuery --%>
+    
+    <script src="jQuerry/js/jquery-3.7.1.min.js"></script>
+
+    <%-- datatables --%>
+    
+    <script src="datatables/js/dataTables.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="header">
+            <div class="logo">
+                <a class="header-logo" href="#">
+                    <img class="header-logo-image" src="img/hosue%20logo.png" alt="Ehouse Logo" width="45" height="45" loading="lazy" />
+                </a>
+                <p>Ehouse</p>
+            </div>
+            <nav class="header-menu">
+                <ul class="header-menu-list">
+                    
+                    <li class="header-menu-item">
+                        <a class="header-menu-link is-current" href="homepage.aspx">Home</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a class="header-menu-link"" href="#">About us</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a class="header-menu-link" href="#">Terms</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <asp:LinkButton class="header-menu-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">View apartaments</asp:LinkButton>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <asp:Button ID="Button1" class="header-user-button button" runat="server" Text="User login" OnClick="Button1_Click" />
+                <asp:Button ID="Button2" class="header-user-button button" runat="server" Text="Sign Up" OnClick="Button2_Click" />
+                <asp:Button ID="Button3" class="header-user-button button" runat="server" Text="Log out" OnClick="Button3_Click" />
+                <asp:LinkButton class="header-menu-link" ID="LinkButton7" runat="server" OnClick="LinkButton7_Click">Hello User</asp:LinkButton>
+            </div>
+            <button class="header-burger-button" type="button" title="Open menu">
+                <span class="visually-hidden">Open menu</span>
+                <span>
+
+                </span>
+            </button>
+
+        </header>
+
+        <%-- Main content PlaceHolder --%>
+        <main class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+        <%-- Main content PlaceHolder --%>
+
+        <footer>
+            <div id="footer1">
+                    <p class="admin-links">
+                        <asp:LinkButton class="footer-links" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Admin login</asp:LinkButton>
+                        <asp:LinkButton class="footer-links" ID="LinkButton11" runat="server" OnClick="LinkButton11_Click" Visible="false">Realtor's Managment</asp:LinkButton>
+                        <asp:LinkButton class="footer-links" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" Visible="false">Owner's Managment</asp:LinkButton>
+                        <asp:LinkButton class="footer-links" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click" Visible="false">Apartaments inventory</asp:LinkButton>
+                        <asp:LinkButton class="footer-links" ID="LinkButton9" runat="server" OnClick="LinkButton9_Click" Visible="false">Apartaments Issuing</asp:LinkButton>
+                        <asp:LinkButton class="footer-links" ID="LinkButton10" runat="server" OnClick="LinkButton10_Click" Visible="false">Member Managment</asp:LinkButton>
+                    </p>
+            </div>
+            <div id="footer2">
+                <div class="footer-links">
+                    <p>&copy All right Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
